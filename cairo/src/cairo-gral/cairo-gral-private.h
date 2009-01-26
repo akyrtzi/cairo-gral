@@ -44,6 +44,8 @@
 
 CAIRO_BEGIN_DECLS
 
+#define CAIRO_SURFACE_TYPE_GRAL 200
+
 #if CAIRO_GRAL_MAX_VERTICES <= 0x10000
   #define CAIRO_GRAL_USE_SHORT_INDICES 1
   typedef uint16_t cairo_gral_vertex_index_t;
