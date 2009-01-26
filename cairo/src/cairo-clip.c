@@ -884,7 +884,7 @@ _cairo_clip_copy_rectangle_list (cairo_clip_t *clip, cairo_gstate_t *gstate)
     }
 
     if (clip->has_region) {
-	cairo_box_int_t *boxes;
+	cairo_box_int_t *boxes = NULL;
         int i;
 
 	if (_cairo_region_get_boxes (&clip->region, &n_boxes, &boxes))

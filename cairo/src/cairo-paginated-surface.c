@@ -399,6 +399,7 @@ _paint_page (cairo_paginated_surface_t *surface)
 	region = _cairo_analysis_surface_get_unsupported (analysis);
 
 	num_boxes = 0;
+	boxes = NULL;
 	status = _cairo_region_get_boxes (region, &num_boxes, &boxes);
 	if (unlikely (status))
 	    goto FAIL;

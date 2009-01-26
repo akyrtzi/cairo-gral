@@ -1473,6 +1473,7 @@ _cairo_win32_surface_set_clip_region (void           *abstract_surface,
 
 	_cairo_region_get_extents (region, &extents);
 	num_boxes = 0;
+	boxes = NULL;
 	status = _cairo_region_get_boxes (region, &num_boxes, &boxes);
 	if (status)
 	    return status;
