@@ -744,6 +744,19 @@
 				>
 			</File>
 		</Filter>
+		<File
+			RelativePath="..\cairo-features.h"
+			>
+			<FileConfiguration
+				Name="Debug|Win32"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy $(InputPath) &quot;../../cairo/src&quot;"
+					Outputs="../../cairo/src/cairo-features.h"
+				/>
+			</FileConfiguration>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
