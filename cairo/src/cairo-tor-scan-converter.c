@@ -320,7 +320,7 @@ struct _pool_chunk {
     struct _pool_chunk *prev_chunk;
 
     /* Actual data starts here.	 Well aligned for pointers. */
-    unsigned char data[0];
+    unsigned char data[1];
 };
 
 /* A memory pool.  This is supposed to be embedded on the stack or

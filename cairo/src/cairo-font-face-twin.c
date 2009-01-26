@@ -36,6 +36,11 @@
 
 #define _ISOC99_SOURCE /* for round() */
 
+#ifdef _MSC_VER
+/* No round() on MSVC */
+# define round(X) ((double)_cairo_lround(X))
+#endif
+
 #include "cairoint.h"
 
 #include <math.h>
