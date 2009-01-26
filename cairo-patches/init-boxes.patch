@@ -1,0 +1,37 @@
+diff --git a/cairo/src/cairo-clip.c b/cairo/src/cairo-clip.c
+index f0f68a3..143be09 100644
+--- a/src/cairo-clip.c
++++ b/src/cairo-clip.c
+@@ -884,7 +884,7 @@ _cairo_clip_copy_rectangle_list (cairo_clip_t *clip, cairo_gstate_t *gstate)
+     }
+ 
+     if (clip->has_region) {
+-	cairo_box_int_t *boxes;
++	cairo_box_int_t *boxes = NULL;
+         int i;
+ 
+ 	if (_cairo_region_get_boxes (&clip->region, &n_boxes, &boxes))
+diff --git a/cairo/src/cairo-paginated-surface.c b/cairo/src/cairo-paginated-surface.c
+index 5d4e08f..679c440 100644
+--- a/src/cairo-paginated-surface.c
++++ b/src/cairo-paginated-surface.c
+@@ -399,6 +399,7 @@ _paint_page (cairo_paginated_surface_t *surface)
+ 	region = _cairo_analysis_surface_get_unsupported (analysis);
+ 
+ 	num_boxes = 0;
++    boxes = NULL;
+ 	status = _cairo_region_get_boxes (region, &num_boxes, &boxes);
+ 	if (unlikely (status))
+ 	    goto FAIL;
+diff --git a/cairo/src/cairo-win32-surface.c b/cairo/src/cairo-win32-surface.c
+index 03a8f61..1f34eb6 100644
+--- a/src/cairo-win32-surface.c
++++ b/src/cairo-win32-surface.c
+@@ -1473,6 +1473,7 @@ _cairo_win32_surface_set_clip_region (void           *abstract_surface,
+ 
+ 	_cairo_region_get_extents (region, &extents);
+ 	num_boxes = 0;
++    boxes = NULL;
+ 	status = _cairo_region_get_boxes (region, &num_boxes, &boxes);
+ 	if (status)
+ 	    return status;

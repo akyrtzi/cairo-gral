@@ -1,0 +1,29 @@
+diff --git a/cairo/src/cairo-font-face-twin.c b/cairo/src/cairo-font-face-twin.c
+index b834322..ae89f9c 100644
+--- a/cairo/src/cairo-font-face-twin.c
++++ b/cairo/src/cairo-font-face-twin.c
+@@ -36,6 +36,11 @@
+ 
+ #define _ISOC99_SOURCE /* for round() */
+ 
++#ifdef _MSC_VER
++/* No round() on MSVC */
++# define round(X) ((double)_cairo_lround(X))
++#endif
++
+ #include "cairoint.h"
+ 
+ #include <math.h>
+diff --git a/cairo/src/cairo-tor-scan-converter.c b/cairo/src/cairo-tor-scan-converter.c
+index 087f010..dfcb46a 100644
+--- a/cairo/src/cairo-tor-scan-converter.c
++++ b/cairo/src/cairo-tor-scan-converter.c
+@@ -320,7 +320,7 @@ struct _pool_chunk {
+     struct _pool_chunk *prev_chunk;
+ 
+     /* Actual data starts here.	 Well aligned for pointers. */
+-    unsigned char data[0];
++    unsigned char data[1];
+ };
+ 
+ /* A memory pool.  This is supposed to be embedded on the stack or
