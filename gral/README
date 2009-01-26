@@ -1,0 +1,19 @@
+Gral - Graphics Accelerator Library
+
+What is gral
+============
+Gral is a very thin wrapper over another hardware accelerated rendering API (e.g OpenGL, Ogre3D, etc.).
+It allows the cairo backend for gral (cairo-gral) to be rendering API agnostic.
+Any rendering API that gral targets can accelerate cairo graphics through the cairo-gral backend.
+
+Gral-Ogre
+==========
+Wrapper over Ogre3D's (http://ogre3d.org) RenderSystem API.
+
+Gral-GL
+===========
+TODO
+
+History
+-------
+Gral and cairo-gral were developed by Argiris Kirtzidis <akyrtzi@gmail.com>

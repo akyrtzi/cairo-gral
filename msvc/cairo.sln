@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cairo", "cairo\cairo.vcproj", "{E2160D7F-B6FD-4F0B-9521-B86801B2DAA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F7755C30-F339-46A4-93B9-7EBCAE8BA73D} = {F7755C30-F339-46A4-93B9-7EBCAE8BA73D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gral", "gral\gral.vcproj", "{F7755C30-F339-46A4-93B9-7EBCAE8BA73D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OgreCairoRenderer", "OgreCairoRenderer\OgreCairoRenderer.vcproj", "{67019EF1-6EFE-46FA-969D-BFE08879D5DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F7755C30-F339-46A4-93B9-7EBCAE8BA73D} = {F7755C30-F339-46A4-93B9-7EBCAE8BA73D}
+		{E2160D7F-B6FD-4F0B-9521-B86801B2DAA4} = {E2160D7F-B6FD-4F0B-9521-B86801B2DAA4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_SvgViewer", "Demo_SvgViewer\Demo_SvgViewer.vcproj", "{9632B0A1-7871-41A6-A2B6-00E65031CC89}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67019EF1-6EFE-46FA-969D-BFE08879D5DA} = {67019EF1-6EFE-46FA-969D-BFE08879D5DA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_CairoTexture", "Demo_CairoTexture\Demo_CairoTexture.vcproj", "{26F978DE-D8F1-42A6-B1D6-8423149F88AD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67019EF1-6EFE-46FA-969D-BFE08879D5DA} = {67019EF1-6EFE-46FA-969D-BFE08879D5DA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2160D7F-B6FD-4F0B-9521-B86801B2DAA4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2160D7F-B6FD-4F0B-9521-B86801B2DAA4}.Debug|Win32.Build.0 = Debug|Win32
+		{E2160D7F-B6FD-4F0B-9521-B86801B2DAA4}.Release|Win32.ActiveCfg = Release|Win32
+		{E2160D7F-B6FD-4F0B-9521-B86801B2DAA4}.Release|Win32.Build.0 = Release|Win32
+		{F7755C30-F339-46A4-93B9-7EBCAE8BA73D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F7755C30-F339-46A4-93B9-7EBCAE8BA73D}.Debug|Win32.Build.0 = Debug|Win32
+		{F7755C30-F339-46A4-93B9-7EBCAE8BA73D}.Release|Win32.ActiveCfg = Release|Win32
+		{F7755C30-F339-46A4-93B9-7EBCAE8BA73D}.Release|Win32.Build.0 = Release|Win32
+		{67019EF1-6EFE-46FA-969D-BFE08879D5DA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{67019EF1-6EFE-46FA-969D-BFE08879D5DA}.Debug|Win32.Build.0 = Debug|Win32
+		{67019EF1-6EFE-46FA-969D-BFE08879D5DA}.Release|Win32.ActiveCfg = Release|Win32
+		{67019EF1-6EFE-46FA-969D-BFE08879D5DA}.Release|Win32.Build.0 = Release|Win32
+		{9632B0A1-7871-41A6-A2B6-00E65031CC89}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9632B0A1-7871-41A6-A2B6-00E65031CC89}.Debug|Win32.Build.0 = Debug|Win32
+		{9632B0A1-7871-41A6-A2B6-00E65031CC89}.Release|Win32.ActiveCfg = Release|Win32
+		{9632B0A1-7871-41A6-A2B6-00E65031CC89}.Release|Win32.Build.0 = Release|Win32
+		{26F978DE-D8F1-42A6-B1D6-8423149F88AD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{26F978DE-D8F1-42A6-B1D6-8423149F88AD}.Debug|Win32.Build.0 = Debug|Win32
+		{26F978DE-D8F1-42A6-B1D6-8423149F88AD}.Release|Win32.ActiveCfg = Release|Win32
+		{26F978DE-D8F1-42A6-B1D6-8423149F88AD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		AMDCaProjectFile = E:\Projects\cairo\cairo-git\msvc\CodeAnalyst\cairo.caw
+	EndGlobalSection
+EndGlobal
